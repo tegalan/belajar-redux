@@ -19,7 +19,14 @@ class InputName extends Component {
     }
 
     saveData() {
-        this.props.addData({...this.state})
+        const test = this.props.addData({...this.state})
+        .then(() => this.setState({
+            name:'',
+            age:'',
+            address:''
+        }))
+        .catch((error) => console.log(error))
+        
     }
 
     render() {

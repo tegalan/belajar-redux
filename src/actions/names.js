@@ -41,7 +41,7 @@ export const namesDataAdded = (name) => {
 export const namesAddData = (name) => {
     console.log("Dispatch add name",name)
     return (dispatch) => {
-        fetch(API_URL, {
+        return fetch(API_URL, {
             method:'POST',
             headers: {
                 'Accept': 'application/json',
